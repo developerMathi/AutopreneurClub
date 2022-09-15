@@ -22,7 +22,7 @@ namespace AutopreneurClub.Views
 
             On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom)
              .SetBarItemColor(Xamarin.Forms.Application.Current.RequestedTheme == OSAppTheme.Dark ? Color.Gray : Color.Black)
-             .SetBarSelectedItemColor(Xamarin.Forms.Application.Current.RequestedTheme == OSAppTheme.Dark ? Color.FromHex("#fecd0d") : Color.FromHex("#fecd0d"))
+             .SetBarSelectedItemColor(Xamarin.Forms.Application.Current.RequestedTheme == OSAppTheme.Dark ? Color.FromHex("#f7921e") : Color.FromHex("#f7921e"))
              .SetIsSwipePagingEnabled(false);
 
         }
@@ -32,7 +32,7 @@ namespace AutopreneurClub.Views
         {
             base.OnAppearing();
             On<Android>().SetBarItemColor(Xamarin.Forms.Application.Current.RequestedTheme == OSAppTheme.Dark ? Color.Gray : Color.Black)
-                 .SetBarSelectedItemColor(Xamarin.Forms.Application.Current.RequestedTheme == OSAppTheme.Dark ? Color.FromHex("#fecd0d") : Color.FromHex("#fecd0d"));
+                 .SetBarSelectedItemColor(Xamarin.Forms.Application.Current.RequestedTheme == OSAppTheme.Dark ? Color.FromHex("#f7921e") : Color.FromHex("#f7921e"));
 
             this.SelectedItem = Dashboard;
         }
