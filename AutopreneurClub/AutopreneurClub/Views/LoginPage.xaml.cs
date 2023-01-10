@@ -480,5 +480,10 @@ namespace AutopreneurClub.Views
             parentAnimation.Commit(this, "ScaleIt", length: 6000, easing: Easing.Linear,
                 finished: (v, c) => BackImage.Scale=1, repeat: () => true);
         }
+
+        private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new JoinClubPage());
+        }
     }
 }

@@ -73,7 +73,7 @@
                                        HeightRequest="35"></ActivityIndicator>
 
                 </Grid>
-                <ActivityIndicator Color="{StaticResource PrimaryColor}"
+                <ActivityIndicator Color="{StaticResource AccentColor}"
                                        IsRunning="True"
                                        Grid.Row="0"
                                        Grid.Column="1"

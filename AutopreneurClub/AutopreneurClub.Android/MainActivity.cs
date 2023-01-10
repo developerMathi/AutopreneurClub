@@ -14,7 +14,7 @@ using Xamarin.Forms.PancakeView.Droid;
 
 namespace AutopreneurClub.Droid
 {
-    [Activity(Label = "AutopreneurClub", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
+    [Activity(Label = "AutopreneurClub", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize, Exported =true )]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -41,11 +41,11 @@ namespace AutopreneurClub.Droid
             //FacebookClientManager.Initialize(this);
             string pagename = null;
             string data = null;
-            if (Intent.Extras != null)
-            {
-                pagename = Intent.GetStringExtra("PageName") ?? string.Empty;
-                data = Intent.GetStringExtra("Data") ?? string.Empty;
-            }
+            //if (Intent.Extras != null)
+            //{
+            //    pagename = Intent.GetStringExtra("PageName") ?? string.Empty;
+            //    data = Intent.GetStringExtra("Data") ?? string.Empty;
+            //}
             CardsViewRenderer.Preserve();
             LoadApplication(new App());
         }

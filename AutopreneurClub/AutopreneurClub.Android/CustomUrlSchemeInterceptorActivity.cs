@@ -14,7 +14,7 @@ using AutopreneurClub.AuthHelpers;
 
 namespace AutopreneurClub.Droid
 {
-	[Activity(Label = "CustomUrlSchemeInterceptorActivity", NoHistory = true, LaunchMode = LaunchMode.SingleTop)]
+	[Activity(Label = "CustomUrlSchemeInterceptorActivity", NoHistory = true, LaunchMode = LaunchMode.SingleTop,Exported =false)]
 	[IntentFilter(
 	new[] { Intent.ActionView },
 	Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },

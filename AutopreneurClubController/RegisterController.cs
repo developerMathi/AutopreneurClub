@@ -123,6 +123,17 @@ namespace AutopreneurClubController
                                 if (vehId > 0 && vehicleTypeID > 0)
                                 {
                                     cam.agreementVehicle = vehicleService.Getvehicle(vehicleTypeID, vehId, token);
+                                    if(cam.agreementVehicle != null)
+                                    {
+                                        if(cam.agreementVehicle.VehicleImageAWSUrl != null)
+                                        {
+                                            cam.agreementVehicle.ImageUrl= cam.agreementVehicle.VehicleImageAWSUrl;
+                                        }
+                                    }
+                                }
+                                if (cam.VehicleImageAWSUrl != null)
+                                {
+                                    cam.VehicleImageUrl= cam.VehicleImageAWSUrl;
                                 }
                             }
                            

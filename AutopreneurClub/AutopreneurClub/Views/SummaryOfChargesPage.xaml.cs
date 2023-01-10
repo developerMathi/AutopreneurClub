@@ -116,6 +116,7 @@ namespace AutopreneurClub.Views
                 endLoc.Text = reservationView.EndLocationName;
                 if (selectedVehicle.VehicleImageUrl != null)
                 {
+                    
                     vehilcleTypeImage.Source = ImageSource.FromUri(new Uri(selectedVehicle.VehicleImageUrl));
                     VehImageFill.Source = ImageSource.FromUri(new Uri(selectedVehicle.VehicleImageUrl));
                 }

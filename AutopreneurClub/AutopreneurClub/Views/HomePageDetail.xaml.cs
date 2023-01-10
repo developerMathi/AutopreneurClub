@@ -135,8 +135,8 @@ namespace AutopreneurClub.Views
             btnMyRentals.BackgroundColor = Color.Transparent;
             btnPastRental.BackgroundColor = Color.Transparent;
 
-            btnMyRentals.TextColor = Color.Black;
-            btnPastRental.TextColor = Color.Black;
+            btnMyRentals.TextColor = Color.FromHex("#F3f3f3");
+            btnPastRental.TextColor = Color.FromHex("#F3f3f3");
 
             grdPastRentals.IsVisible = false;
             grdRentals.IsVisible = false;
@@ -178,8 +178,8 @@ namespace AutopreneurClub.Views
             dateDiff = DateTime.Now - estTime;
 
             unSelectedTab();
-            btnMyRentals.BackgroundColor = Color.FromHex("#242F60");
-            btnMyRentals.TextColor = Color.White;
+            btnMyRentals.BackgroundColor = Color.FromHex("#F3f3f3");
+            btnMyRentals.TextColor = Color.FromHex("#d86c08");
             grdRentals.IsVisible = true;
             //lastAgreementStack.IsVisible = false;
             Constants.IsHome = true;
@@ -606,6 +606,13 @@ namespace AutopreneurClub.Views
                             crm.VehicleModel = crm.Sample + " (Sample)";
                             crm.VehicleImageUrl = crm.VehicleTypeImageUrl;
                         }
+                        else
+                        {
+                            if(crm.VehicleImageAWSUrl!= null)
+                            {
+                                crm.VehicleImageUrl=crm.VehicleImageAWSUrl;
+                            }
+                        }
                     }
                     if(newregDB.Reservations.Count > 2)
                     {
@@ -619,6 +626,10 @@ namespace AutopreneurClub.Views
                     {
                         cam.isReservationVisible = true;
                         cam.isExtraVisible = false;
+                        if (cam.VehicleImageAWSUrl != null)
+                        {
+                            cam.VehicleImageUrl = cam.VehicleImageAWSUrl;
+                        }
                     }
                     if (newregDB.Agreements.Count > 2)
                     {
@@ -741,8 +752,8 @@ namespace AutopreneurClub.Views
         private void btnMyRentals_Clicked(object sender, EventArgs e)
         {
             unSelectedTab();
-            btnMyRentals.BackgroundColor = Color.FromHex("#242F60");
-            btnMyRentals.TextColor = Color.White;
+            btnMyRentals.BackgroundColor = Color.FromHex("#F3f3f3");
+            btnMyRentals.TextColor = Color.FromHex("#d86c08");
             //if (isreservation)
             //{
                 grdRentals.IsVisible = true;
@@ -764,8 +775,8 @@ namespace AutopreneurClub.Views
         {
             unSelectedTab();
             //BooknowBtn.IsVisible = false;
-            btnPastRental.BackgroundColor = Color.FromHex("#242F60");
-            btnPastRental.TextColor = Color.White;
+            btnPastRental.BackgroundColor = Color.FromHex("#F3f3f3");
+            btnPastRental.TextColor = Color.FromHex("#d86c08"); 
             grdPastRentals.IsVisible = true;
         }
 
@@ -1231,5 +1242,9 @@ namespace AutopreneurClub.Views
             return response;
         }
 
+        private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new JoinClubPage());
+        }
     }
 }

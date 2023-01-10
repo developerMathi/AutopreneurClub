@@ -69,7 +69,9 @@ namespace AutopreneurClub.Droid
                         .SetDefaults((int)NotificationDefaults.Sound | (int)NotificationDefaults.Vibrate)
                         .SetVisibility((int)NotificationVisibility.Public)
                         .SetSmallIcon(Resource.Mipmap.launcher_foreground)
+                       
                         .SetContentIntent(pendingIntent);
+
                 NotificationManager notificationManager = mContext.GetSystemService(Context.NotificationService) as NotificationManager;
 
                 if (global::Android.OS.Build.VERSION.SdkInt >= global::Android.OS.BuildVersionCodes.O)

@@ -158,8 +158,8 @@ namespace AutopreneurClub.Views
                                 seatConut.Text = AgreementByAgreementIdMobileResponse.agreementVehicle.Seats;
                                 bagCount.Text = AgreementByAgreementIdMobileResponse.agreementVehicle.Baggages.ToString();
                                 //tranType.Text = AgreementByAgreementIdMobileResponse.agreementVehicle.Transmission;
-                                vehicleImage.Source = ImageSource.FromUri(new Uri(AgreementByAgreementIdMobileResponse.agreementVehicle.ImageUrl));
-                                carBackImage.Source = ImageSource.FromUri(new Uri(AgreementByAgreementIdMobileResponse.agreementVehicle.ImageUrl));
+                                vehicleImage.Source = ImageSource.FromUri(new Uri(AgreementByAgreementIdMobileResponse.agreementVehicle.VehicleImageAWSUrl!= null? AgreementByAgreementIdMobileResponse.agreementVehicle.VehicleImageAWSUrl: AgreementByAgreementIdMobileResponse.agreementVehicle.ImageUrl));
+                                carBackImage.Source = ImageSource.FromUri(new Uri(AgreementByAgreementIdMobileResponse.agreementVehicle.VehicleImageAWSUrl != null ? AgreementByAgreementIdMobileResponse.agreementVehicle.VehicleImageAWSUrl : AgreementByAgreementIdMobileResponse.agreementVehicle.ImageUrl));
                             }
 
 

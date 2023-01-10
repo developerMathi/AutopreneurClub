@@ -106,6 +106,10 @@ namespace AutopreneurClub.Views
                             {
                                 customerReservationModels[i].VehicleModel = customerReservationModels[i].Sample + " (Sample)";
                             }
+                            if (customerReservationModels[i].VehicleImageAWSUrl != null)
+                            {
+                                customerReservationModels[i].VehicleImageUrl = customerReservationModels[i].VehicleImageAWSUrl;
+                            }
                             upreserItemSource.Add(customerReservationModels[i]);
                         }
                         upcomingReservationList.ItemsSource = upreserItemSource;

@@ -975,7 +975,7 @@
                                                                 <Label
                                                                     FontFamily="SourceSansPro-Bold"
                                                                     Text="{Binding vehicleName}"
-                                                                    TextColor="{StaticResource PrimaryColor}"
+                                                                   TextColor="{AppThemeBinding Light= {StaticResource BlackColor},Dark={StaticResource BackGroundColor}}"
                                                                     VerticalOptions="Center"
                                                                     HorizontalOptions="StartAndExpand">
                                                                     <Label.FontSize>
@@ -1001,7 +1001,7 @@
                                                                         Margin="0"
                                                                         FontFamily="SourceSansPro-Bold"
                                                                         Text="$"
-                                                                        TextColor="{StaticResource PrimaryColor}"
+                                                                        TextColor="{AppThemeBinding Light= {StaticResource BlackColor},Dark={StaticResource BackGroundColor}}"
                                                                         VerticalOptions="Center">
                                                                         <Label.FontSize>
                                                                             <OnPlatform x:TypeArguments="x:Double">
@@ -1024,7 +1024,7 @@
                                                                         Margin="0"
                                                                         FontFamily="SourceSansPro-Bold"
                                                                         Text="{Binding DailyRate}"
-                                                                        TextColor="{StaticResource PrimaryColor}"
+                                                                       TextColor="{AppThemeBinding Light= {StaticResource BlackColor},Dark={StaticResource BackGroundColor}}"
                                                                         VerticalOptions="Center">
                                                                         <Label.FontSize>
                                                                             <OnPlatform x:TypeArguments="x:Double">

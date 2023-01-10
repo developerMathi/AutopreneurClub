@@ -569,6 +569,35 @@
 
                     </StackLayout>
 
+                    <Label
+                        Margin="1,0,0,0"
+                        FontFamily="SourceSansPro-Black"
+                        Text="Join The Club!"
+                        TextColor="{StaticResource AccentColor}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="CenterAndExpand">
+
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="iOS">
+                                    <OnIdiom
+                                        x:TypeArguments="x:Double"
+                                        Phone="16"
+                                        Tablet="20" />
+                                </On>
+                                <On Platform="Android,Windows">
+                                    <OnIdiom
+                                        x:TypeArguments="x:Double"
+                                        Phone="18"
+                                        Tablet="22" />
+                                </On>
+                            </OnPlatform>
+                        </Label.FontSize>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
 
                 </StackLayout>
             </ScrollView>

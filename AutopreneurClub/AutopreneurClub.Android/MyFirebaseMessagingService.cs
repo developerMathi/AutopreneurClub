@@ -5,7 +5,7 @@ using Firebase.Messaging;
 
 namespace AutopreneurClub.Droid
 {
-    [Service]
+    [Service(Exported = false)]
     [IntentFilter(new[] { "com.google.firebase.MESSAGING_EVENT" })]
     public class MyFirebaseMessagingService : FirebaseMessagingService
     {
@@ -16,7 +16,7 @@ namespace AutopreneurClub.Droid
         public override void OnMessageReceived(RemoteMessage message)
         {
             base.OnMessageReceived(message);
-            new NotificationHelper().CreateNotification(message.GetNotification().Title, message.GetNotification().Body, null, null);
+            //new NotificationHelper().CreateNotification(message.GetNotification().Title, message.GetNotification().Body, null, null);
         }
     }
 }

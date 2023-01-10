@@ -6,7 +6,7 @@ using Firebase.Iid;
 
 namespace AutopreneurClub.Droid
 {
-    [Service]
+    [Service(Exported = false)]
     [IntentFilter(new[] { "com.google.firebase.INSTANCE_ID_EVENT" })]
     public class MyFirebaseIIDService : FirebaseInstanceIdService
     {

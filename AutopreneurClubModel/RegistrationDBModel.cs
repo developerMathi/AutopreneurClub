@@ -86,6 +86,7 @@ namespace AutopreneurClubModel
         public string Sample { get; set; }
         public string VehicleTypeImageUrl { get; set; }
         public string VehicleImageUrl { get; set; }
+        public string VehicleImageAWSUrl { get; set; }
         public int Totaldays { get; set; }
         public int ClientId { get; set; }
 
@@ -140,6 +141,8 @@ namespace AutopreneurClubModel
 
         public string VehicleTypeName { get; set; }
         public string VehicleImageUrl { get; set; }
+        public string VehicleImageAWSUrl { get; set; }
+
         public int Totaldays { get; set; }
         public int ClientId { get; set; }
 

@@ -235,7 +235,7 @@ namespace AutopreneurClub.Views
             if (reservationByIDMobileResponse.vehicleModel != null)
             {
                 reservationByIDMobileResponse.vehicleTypeModel = new VehicleTypeWithRatesViewModel();
-                reservationByIDMobileResponse.vehicleTypeModel.ImageUrl = reservationByIDMobileResponse.vehicleModel.ImageUrl;
+                reservationByIDMobileResponse.vehicleTypeModel.ImageUrl = reservationByIDMobileResponse.vehicleModel.VehicleImageAWSUrl!= null? reservationByIDMobileResponse.vehicleModel.VehicleImageAWSUrl:reservationByIDMobileResponse.vehicleModel.ImageUrl;
                 reservationByIDMobileResponse.vehicleTypeModel.Seats = reservationByIDMobileResponse.vehicleModel.Seats;
                 reservationByIDMobileResponse.vehicleTypeModel.Baggages = reservationByIDMobileResponse.vehicleModel.Baggages;
                 reservationByIDMobileResponse.vehicleTypeModel.Transmission = reservationByIDMobileResponse.vehicleModel.Transmission;

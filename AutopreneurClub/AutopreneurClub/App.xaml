@@ -17,8 +17,8 @@
 
 
             <Color x:Key="BlackColor">#000000</Color>
-            <Color x:Key="PrimaryColor">#242F60</Color>
-            <Color x:Key="AccentColor">#f7921e</Color>
+            <Color x:Key="PrimaryColor">#000000</Color>
+            <Color x:Key="AccentColor">#d86c08</Color>
             <Color x:Key="PrimaryColorDuplicate">#000000</Color>
             <Color x:Key="GrayColor">#9C9D9E</Color>
             <Color x:Key="LightGrayColor">#EAEAEA</Color>
@@ -38,7 +38,7 @@
 
 
             <!--<Color x:Key="BlackColor">#232628</Color>-->
-            <Color x:Key="BackGroundColor">#FFFFFF</Color>
+            <Color x:Key="BackGroundColor">#F3f3f3</Color>
             <!--<Color x:Key="PrimaryColor">#7d2c24</Color>-->
             <Color x:Key="PrimaryColorLight">#ffdcd9</Color>
 

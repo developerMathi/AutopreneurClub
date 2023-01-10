@@ -537,7 +537,6 @@ namespace AutopreneurClub.Views
             var obj = (Image)sender;
             var objstac = (StackLayout)obj.Parent;
             var objGrid = (Grid)objstac.Parent;
-            var viewcell = (ExtendedViewCell)objGrid.Parent;
             MiscChargeSearchReview selectedMischrge = objGrid.BindingContext as MiscChargeSearchReview;
             string discription = selectedMischrge.Description;
             if (selectedMischrge.Name == "Insurance")

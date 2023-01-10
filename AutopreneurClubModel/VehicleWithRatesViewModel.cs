@@ -32,5 +32,8 @@ namespace AutopreneurClubModel
         public int Baggages { get; set; }
         public string FuelType { get; set; }
         public int TankSize { get; set; }
+
+        public string VehicleImageAWSUrl { get; set; }
+
     }
 }
